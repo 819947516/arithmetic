@@ -16,7 +16,7 @@ class LinkedList {
     }
     // 根据value查找节点
     findByValue(item) {
-        let currentNode = this.head.next
+        let currentNode = this.head
         while(currentNode !== null && currentNode.element !== item) {
             currentNode = currentNode.next
         }
@@ -25,7 +25,7 @@ class LinkedList {
 
     // 根据index查找节点
     findByIndex(index) {
-        let currentNode = this.head.next
+        let currentNode = this.head
         let pos = 0
 
         while(currentNode !== null && pos !== index) {
@@ -92,13 +92,13 @@ class LinkedList {
 }
 
 // Test
-const LList = new LinkedList()
-console.log('-------------append item------------')
-LList.append('chen')
-LList.append('curry')
-LList.append('sang')
-LList.append('zhao') 
-LList.display() // chen -> curry -> sang -> zhao
+// const LList = new LinkedList()
+// console.log('-------------append item------------')
+// LList.append('chen')
+// LList.append('curry')
+// LList.append('sang')
+// LList.append('zhao') 
+// LList.display() // chen -> curry -> sang -> zhao
 // console.log('-------------insert item------------')
 // LList.insert('qian', 'chen') // 首元素后插入
 // LList.insert('zhou', 'zhao') // 尾元素后插入
