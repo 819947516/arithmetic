@@ -65,7 +65,7 @@ const partition = (arr, pivot, left, right) => {
     for (let i = left; i < right; i++) {
         if (arr[i] < pivotVal) {
             swap(arr, i, startIndex)
-            startIndex++
+            startIndex++ // startIndex与j同时移动 startIndex始终指向一个大于pivot的数
         }
     }
     swap(arr, startIndex, pivot)
@@ -122,7 +122,7 @@ const KthPartition = (arr, left, right) => {
     for(let j = left; j < right; j++) {
         if(arr[j] < pivot) {
             Kthswap(arr, startIndex, j);
-            startIndex++
+            startIndex++ 
         }
     }
     Kthswap(arr, startIndex, right)
